@@ -243,7 +243,7 @@ class lenandoDE extends CSVPluginGenerator {
       $itemCrossSellingList = $this->getItemCrossSellingList($variation);
       $basePriceList = $this->elasticExportHelper->getBasePriceList($variation, (float) $priceList['price'], $settings->get('lang'));
       $imageList = $this->elasticExportHelper->getImageListInOrder($variation, $settings, 3, 'variationImages');
-      
+      $flag = $this->getStoreSpecialFlag($variation);
 
       $attributenliste = ( strlen($attributes) ? ' | ' . $attributes : '' );
       $attributenliste = substr($attributenliste, 3);
@@ -448,7 +448,7 @@ class lenandoDE extends CSVPluginGenerator {
     }
   }
 
-  private function getStorageSpecialFlag($variation): string
+  private function getStoreSpecialFlag($variation): string
   {
     if ( ! is_null($variation['data']['item']['storeSpecial']) && ! is_null($variation['data']['item']['storeSpecial']['id']) && array_key_exists($variation['data']['item']['storeSpecial']['id'], $this->flags) ) {
       return $this->flags[$variation['data']['item']['storeSpecial']['id']];
