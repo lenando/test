@@ -243,7 +243,7 @@ class lenandoDE extends CSVPluginGenerator {
       $itemCrossSellingList = $this->getItemCrossSellingList($variation);
       $basePriceList = $this->elasticExportHelper->getBasePriceList($variation, (float) $priceList['price'], $settings->get('lang'));
       $imageList = $this->elasticExportHelper->getImageListInOrder($variation, $settings, 3, 'variationImages');
-      $flag = $this->getStoreSpecialFlag($variation);
+      
 
       $attributenliste = ( strlen($attributes) ? ' | ' . $attributes : '' );
       $attributenliste = substr($attributenliste, 3);
