@@ -1,0 +1,24 @@
+{
+  "name": "lenando",
+  "description": "This plugin adds the format LenandoDE to the Elastic Export.",
+  "namespace": "ElasticExportlenandoDE",
+  "author": "lenando.de",
+  "type": "export",
+  "keywords": ["marktplatz", "marketing", "export", "lenando"],
+  "serviceProvider": "ElasticExportlenandoDE\\ElasticExportlenandoDEServiceProvider",
+  "license": "GNU GENERAL PULBIC LICENSE Version 3, 29 June 2007",
+  "price": 0.00,
+  "shortDescription": {
+    "de": "Das Plugin lenando fügt das Datenformat lenandoDE zum elastischen Export hinzu.",
+    "en": "This plugin adds the format lenandoDE to the Elastic Export."
+  },
+  "categories": [
+    "3523"
+  ],
+  "version": "1.0.3",
+  "require": ["ElasticExport"],
+  "marketplaceName": {
+    "de": "lenando.de",
+    "en": "lenando.de"
+  }
+}
