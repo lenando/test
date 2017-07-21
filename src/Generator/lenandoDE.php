@@ -279,7 +279,7 @@ class lenandoDE extends CSVPluginGenerator {
       $data = [
         'Produktname' => $this->elasticExportHelper->getMutatedName($variation, $settings),
         'Artikelnummer' => $variation['data']['variation']['number'],
-        'ean' => $this->elasticExportHelper->getBarcodeType($variation, $settings->get('barcode')),
+        'ean' => $this->elasticExportHelper->getBarcodeByType($variation, $settings->get('barcode')),
         'Hersteller' => $manufacturer,
         'Steuersatz' => $priceList['vatValue'],
         'Preis' => $priceList['price'],
